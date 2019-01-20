@@ -2,6 +2,7 @@
 <html>
 
 <head>
+  <link rel="stylesheet" href="css.css">
   <title>CSS/HTML Workshop with Privateaser</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
     crossorigin="anonymous">
@@ -10,30 +11,45 @@
 </head>
 
 <body>
+  <h1 align="center">Invoices of Privateaser</h1>
+  <p align="center">Generate invoices by filling the following boxes!</p>
 
-  <div class="card mx-auto" style="width:50rem;">
+  <div class="card mx-auto bg-dark text-white mb-3" style="width:37rem;">
+    <div class="card-header">
+      Bar
+    </div>
     <div class="card-body">
-      <h4 class="card-title">Invoices</h4>
-      Fill in the following box
       <div id="bar">
         <input class="js-name" type="text" placeholder="Bar name" />
         <input class="js-price-by-hour" type="number" placeholder="Price by hour" />
         <input class="js-price-by-person" type="number" placeholder="Price by person" />
       </div>
-      </br>
+    </div>
+  </div>
+  </br>
+  <div class="card mx-auto bg-dark text-white mb-3" style="width:37rem;">
+    <div class="card-header">
+      Booker
+    </div>
+    <div class="card-body">
       <div id="booker">
         <input class="js-name" type="text" placeholder="Booker name" />
         <input class="js-time" type="number" placeholder="Time in h" />
         <input class="js-persons" type="number" placeholder="Persons" />
-      
       </div>
-      Do you wish to have the deductible option?  
+      Do you wish to have the deductible option?
       <input class="js-option" type="checkbox" placeholder="Deductible option" />
-      </br>
-      <Button href="#" class="btn btn-primary" id="compute">Compute</Button>
-      <div id="actors"></div>
     </div>
   </div>
+
+  </br>
+  <p align="center">
+    <Button align="center" href="#" class="btn btn" id="compute">Compute</Button>
+  </p>
+  
+  <div id="actors" style="margin: 0 auto;width: 1050px;"></div>
+
+
   <script src="privateaser.js"></script>
   <script src="index.js"></script>
 </body>

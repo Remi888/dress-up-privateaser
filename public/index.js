@@ -7,11 +7,14 @@
     const div = document.createElement('div');
     const template = actors.map(actor => {
       return `
-        <div class="actor">
-          <span>${actor.who}</span>
-          <span>${actor.type}</span>
-          <span>${actor.amount}</span>
-        </div>
+          <div class="actors">
+            <div class="card" align="center" style="width:12rem;margin:5px;float:left;">
+              <div class="card-body">
+                <h4 class="card-title">${actor.who}</h4>
+                <p>${actor.type}</br>${actor.amount}</p>
+              </div>
+            </div>
+          </div>
       `;
     }).join('');
 
@@ -23,7 +26,7 @@
 
   const button = document.querySelector('#compute');
 
-  button.addEventListener('click', function onClick () {
+  button.addEventListener('click', function onClick() {
     const bar = PRIVATEASER.getBar();
     const time = document.querySelector('.js-time').value;
     const persons = document.querySelector('.js-persons').value;
